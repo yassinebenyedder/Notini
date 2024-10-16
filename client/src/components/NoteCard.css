@@ -1,0 +1,197 @@
+/* Note Card Styling */
+.note-card {
+    cursor: default;
+    background-color: #f9f9f9;
+    border: #d6d6d6 solid 2px;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px 20px;
+    margin: 13px 10px;
+    width: 340px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.note-card:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
+}
+
+/* Header */
+.note-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+}
+
+.note-title {
+    color: #333;
+    margin: 0px;
+}
+
+.note-pin {
+    color: #838383;
+    cursor: pointer;
+    margin: 10px -3px 10px 10px;
+}
+
+.note-pin:hover {
+    color: #007bff;
+}
+
+/* Date */
+.note-date {
+    font-size: 12px;
+    color: #888;
+    margin: 5px;
+}
+
+/* Content */
+.note-content {
+    font-size: 14px;
+    color: #555;
+    margin: 5px 0;
+}
+
+/* Tags and Actions in the Footer */
+.note-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.note-tags {
+    font-size: 12px;
+    color: #333;
+    background-color: #e0e0e0;
+    padding: 4px 10px;
+    border-radius: 8px;
+    display: inline-block;
+    font-weight: 500;
+}
+
+.note-tags span {
+    margin-right: 5px;
+}
+
+.note-actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.note-actions i {
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 10px;
+    color: #838383;
+    transition: color 0.2s;
+}
+
+.note-actions i:hover {
+    color: #ff0000;
+}
+
+.notes-grid {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px 60px;
+}
+
+.add-note-button {
+    position: fixed;
+    bottom: 35px;
+    right: 40px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 30%;
+    width: 60px;
+    height: 60px;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.7s, border-radius 0.3s;
+    z-index: 1000;
+}
+
+.add-note-button:hover {
+    border-radius: 50%;
+    background-color: #0056b3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.note-content {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.note-pin.pinned {
+    /* Change to full color when pinned */
+    color: #007bff;
+}
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .notes-grid {
+        justify-content: center;
+        margin: 20px 20px;
+    }
+
+    .note-card {
+        width: 100%;
+        max-width: 450px;
+        margin: 10px 0;
+    }
+
+    .add-note-button {
+        width: 50px;
+        height: 50px;
+        font-size: 30px;
+        bottom: 25px;
+        right: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .notes-grid {
+        flex-direction: column;
+        align-items: center;
+        margin: 10px;
+    }
+
+    .note-card {
+        width: 100%;
+        max-width: 350px;
+        margin: 8px 0;
+    }
+
+    .note-title {
+        font-size: 16px;
+    }
+
+    .note-content {
+        font-size: 12px;
+    }
+
+    .note-tags {
+        font-size: 10px;
+    }
+
+    .add-note-button {
+        width: 45px;
+        height: 45px;
+        font-size: 25px;
+        bottom: 20px;
+        right: 20px;
+    }
+}

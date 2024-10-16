@@ -1,0 +1,191 @@
+/* Modal styling */
+.modal {
+    width: 700px;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    max-width: 100%;
+    transition: all 0.3s ease;
+    border: 1px solid #e0e0e0;
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Title input styling */
+.input-title {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 15px;
+}
+
+/* Textarea styling for the note content */
+.fixed-textarea {
+    width: 100%;
+    height: 120px;
+    padding: 12px;
+    border: none;
+    outline: none;
+    resize: none;
+    font-size: 16px;
+    background-color: #f1f3f4;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    transition: background-color 0.2s ease;
+}
+
+.fixed-textarea:focus {
+    background-color: #fff;
+    box-shadow: 0 0 0 2px #c1d4fa;
+}
+
+.tags-container {
+    display: flex;
+    align-items: center; 
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.tags-area {
+    flex: 1; 
+    padding: 10px;
+    border: none;
+    background-color: #f1f3f4;
+    border-radius: 8px;
+    outline: none;
+    font-size: 14px;
+    transition: background-color 0.2s ease;
+}
+
+.tags-area:focus {
+    background-color: #fff;
+    box-shadow: 0 0 0 2px #c1d4fa;
+}
+
+/* Button styling */
+.submit-button, .close-button {
+    padding: 10px 15px;
+    border: none;
+    background-color: transparent;
+    color: #5f6368;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
+}
+
+.submit-button:hover, .close-button:hover {
+    background-color: #e8eaed;
+}
+
+.submit-button {
+    color: #1a73e8;
+}
+
+.close-button {
+    color: #d93025;
+    float: right;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 10px;
+    
+  }
+  .tag-item {
+    font-size: 12px;
+    color: #333; 
+    background-color: #e0e0e0; 
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 14px;
+    font-weight: 500; 
+    margin-right: 5px;
+    position: relative;
+  }
+  
+  .remove-tag-button {
+    background: none;
+    border: none;
+    color: rgb(104, 104, 104);
+    font-weight: bold;
+    margin-left: 8px;
+    cursor: pointer;
+  }
+  
+  .remove-tag-button:hover {
+    color: rgb(73, 73, 73);
+  }
+  
+
+  /* Responsive design */
+ @media (max-width: 768px) {
+     .modal {
+         width: 95%;
+         padding: 15px;
+     }
+
+     .input-title {
+         font-size: 16px;
+     }
+
+     .fixed-textarea {
+         font-size: 14px;
+         height: 100px;
+     }
+
+     .submit-button,
+     .close-button {
+         font-size: 14px;
+     }
+ }
+
+ @media (max-width: 480px) {
+     .modal {
+         width: 100%;
+         padding: 10px;
+     }
+
+     .input-title {
+         font-size: 14px;
+     }
+
+     .fixed-textarea {
+         font-size: 12px;
+         height: 90px;
+     }
+
+     .tags-area {
+         font-size: 12px;
+     }
+
+     .tags-container {
+         flex-direction: column;
+     }
+
+     .submit-button,
+     .close-button {
+         font-size: 12px;
+         padding: 8px 10px;
+     }
+ }
